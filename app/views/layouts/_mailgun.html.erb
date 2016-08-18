@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="texthtml; charset=UTF-8" http-equiv="Content-Type">
+    <style>
+        body { font-family: Arial, sans-serif; font-size: 14px;}
+        .unsubscribe { font-size: 12px; color: #888; }
+    </style>
+  </head>
+  <body>
+    <img src="http://s29.postimg.org/n6lk9p6pv/logo_mni_small.png"/>
+
+    <br>
+    <%= yield %>
+    <br>
+    <p>Visit our site for the latest coverage: https://euroinsight.mni-news.com/</p>
+    <p align="center">
+      <%= link_to 'Unsubscribe from this mail list', '%unsubscribe_url%', class: 'unsubscribe' %> | <%= link_to 'Privacy Policy', 'http://deutsche-boerse.com/dbg/dispatch/en/kir/dbg_nav/home?displayText=footerPrivacy' %> | <%= link_to 'About Us', Rails.application.routes.url_helpers.url_for(controller: '/pages', slug: 'about-us', action: 'show', only_path: false) %> | <%= link_to 'Contact', Rails.application.routes.url_helpers.url_for(controller: '/pages', slug: 'contact', action: 'show', only_path: false) %>
+      <img src="http://image.email.ft.com/lib/fe961570716407757c/m/5/sp50x50.gif" />
+    </p>
+    <p align="center">You're receiving this email as part of your MNI Euro Insight subscription. To stop receiving email updates please unsubscribe. This email was sent to  <strong>%recipient_email%</strong></p>
+    <p align="center">This email was sent by MNI Euro Insight, a service provided by Market News International, Inc., 40 Fulton Street, 5th Floor, New York, NY 10038, Phone 212-669-6400. Please visit www.mni-news.com for more information.</p>
+  </body>
+</html>
